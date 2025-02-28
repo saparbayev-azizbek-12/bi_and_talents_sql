@@ -39,7 +39,7 @@ FROM Employees
 ORDER BY EmployeeID;
 
 -- TASK 2
-SELECT STRING_AGG(Name, ' ** '), RNK
+SELECT STRING_AGG(Name, ' ** ') AS Employees, RNK
 FROM (
 	SELECT 
 		*,
