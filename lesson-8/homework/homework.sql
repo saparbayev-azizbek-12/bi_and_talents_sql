@@ -72,7 +72,7 @@ order by MinStepNumber
 
 -- TASK 2
 select
-	concat(max(year(hire_date)) + 1,'-',lead(min(year(hire_date)) - 1, 1) over(order by groupID) ) as Years
+	concat(max(year(hire_date)) + 1,'-',lead(min(year(hire_date)) - 1) over(order by groupID) ) as Years
 from (
 	select 
 		employee_id,
